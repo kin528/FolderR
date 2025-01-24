@@ -273,7 +273,7 @@ fileInput.addEventListener('change', async (event) => {
 
     try {
         // Upload the file to the server
-        const response = await fetch('https://file-upload-w934.onrender.com/upload', {
+        const response = await fetch('https://folderr.onrender.com/upload', {
             method: 'POST',
             body: formData,
         });

@@ -8,13 +8,13 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-
 // Your web app's Firebase configuration
 // Firebase Configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBzC_OOQixve_QmMQJCmUV-4EdRgTX3afw",
-  authDomain: "file-upload-c2ae5.firebaseapp.com",
-  projectId: "file-upload-c2ae5",
-  storageBucket: "file-upload-c2ae5.firebasestorage.app",
-  messagingSenderId: "303284634951",
-  appId: "1:303284634951:web:4264eedd2a5f06a503f862",
-  measurementId: "G-BNYBRXW8XK"
+  apiKey: "AIzaSyCBMFUOq6QssSxefbojyhVF_lEHfI6UMlQ",
+  authDomain: "folderredirectionmacabenta.firebaseapp.com",
+  projectId: "folderredirectionmacabenta",
+  storageBucket: "folderredirectionmacabenta.firebasestorage.app",
+  messagingSenderId: "580280550730",
+  appId: "1:580280550730:web:4ca111596bfb05676aadb3",
+  measurementId: "G-T1QBPYCCP5"
 };
 
 

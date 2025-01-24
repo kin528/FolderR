@@ -12,22 +12,22 @@ const port = 3000;
 
 // Firebase Configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBzC_OOQixve_QmMQJCmUV-4EdRgTX3afw",
-    authDomain: "file-upload-c2ae5.firebaseapp.com",
-    projectId: "file-upload-c2ae5",
-    storageBucket: "file-upload-c2ae5.firebasestorage.app",
-    messagingSenderId: "303284634951",
-    appId: "1:303284634951:web:4264eedd2a5f06a503f862",
-    measurementId: "G-BNYBRXW8XK"
+    apiKey: "AIzaSyCBMFUOq6QssSxefbojyhVF_lEHfI6UMlQ",
+    authDomain: "folderredirectionmacabenta.firebaseapp.com",
+    projectId: "folderredirectionmacabenta",
+    storageBucket: "folderredirectionmacabenta.firebasestorage.app",
+    messagingSenderId: "580280550730",
+    appId: "1:580280550730:web:4ca111596bfb05676aadb3",
+    measurementId: "G-T1QBPYCCP5"
   };
 
 const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
 
 cloudinary.config({
-    cloud_name: 'dwqghmhxb',  // Correct Cloudinary account
-    api_key: '362861182137578',
-    api_secret: 'wHsvGKjpBEBwAaoncXlK4p6Tq1k',
+    cloud_name: 'dzvz9o8kz',  // Correct Cloudinary account
+    api_key: '815676167189971',
+    api_secret: '709cHM4xKrTr45aWtMzkR10P8A0',
 });
 
 // Enable CORS for all origins
