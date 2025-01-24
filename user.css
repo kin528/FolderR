@@ -1,69 +1,103 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f3f4f6, #e3e5e8);
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
     color: #333;
+    overflow: hidden;
 }
 
 .container {
-    background: #ffffff;
-    padding: 2rem;
+    background: url('images.jpg') no-repeat center center; /* Replace 'your-image-url.jpg' with your image path */
+    background-size: cover; /* Adjusts the image to cover the entire container */
+    padding: 2.5rem;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    border: 1px solid #e6e6e6;
 }
 
+
 h1 {
-    font-size: 1.8rem;
-    color: #4a4a4a;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    color: #333333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #66a6ff;
+    margin: 0.5rem auto;
+    border-radius: 4px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
 }
 
 /* Form Styles */
 form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    padding: 0.75rem;
+    padding: 1rem;
     border: 1px solid #dcdcdc;
     border-radius: 10px;
     font-size: 1rem;
-    background: #f9f9f9;
+    background: #f8f9fc;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
     width: 100%;
     box-sizing: border-box;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #66a6ff;
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(102, 166, 255, 0.4);
+}
+
+/* Password Field */
 .password-wrapper {
     display: flex;
     align-items: center;
     border: 1px solid #dcdcdc;
     border-radius: 10px;
-    background: #f9f9f9;
-    transition: border-color 0.3s ease;
+    background: #f8f9fc;
     width: 100%;
+    transition: border-color 0.3s ease;
 }
 
 .password-wrapper:focus-within {
-    border-color: #5c67f2;
+    border-color: #66a6ff;
+    box-shadow: 0 0 8px rgba(102, 166, 255, 0.4);
 }
 
 .password-wrapper input {
-    padding: 0.75rem;
+    padding: 1rem;
     border: none;
     font-size: 1rem;
     outline: none;
@@ -74,54 +108,102 @@ input[type="password"] {
 .password-wrapper button {
     background: none;
     border: none;
-    padding: 0.5rem;
+    padding: 0.75rem;
     cursor: pointer;
     outline: none;
-    color: #5c67f2;
+    color: #66a6ff;
+    transition: color 0.3s ease;
 }
 
 .password-wrapper button:hover {
-    color: #4754d1;
+    color: #3579e8;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus {
-    border-color: #5c67f2;
+.nav-right {
+    margin-top: 2rem; /* Moves the entire block further down */
 }
 
+.nav-right .btn {
+    margin-top: 1rem; /* Adds spacing specifically for the button */
+}
+#signupButton {
+    margin-top: 2rem; /* Adjust the value to move it further down */
+}
+/* Buttons */
 button {
-    background: #5c67f2;
+    background: linear-gradient(135deg, #66a6ff, #89f7fe);
     color: #ffffff;
-    padding: 0.75rem;
+    padding: 1rem;
     border: none;
     border-radius: 10px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 button:hover {
-    background: #4754d1;
-    transform: translateY(-3px);
+    background: linear-gradient(135deg, #3579e8, #66a6ff);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(53, 121, 232, 0.4);
 }
 
 button:active {
-    transform: translateY(1px);
+    transform: scale(0.95);
 }
 
 /* Message Container */
 .message-container {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: #f4f6fc;
-    border: 1px solid #dce1f9;
-    border-radius: 10px;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: #f0f4ff;
+    border: 1px solid #c2d4ff;
+    border-radius: 12px;
     color: #4a4a4a;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    text-align: left;
+    position: relative;
+}
+
+.message-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    width: 20px;
+    height: 20px;
+    background: #f0f9ff;
+    border: 1px solid #c2d4ff;
+    transform: rotate(45deg);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
 @media (max-width: 480px) {
     body {
         padding: 1rem;
@@ -133,5 +215,9 @@ button:active {
 
     h1 {
         font-size: 1.5rem;
+    }
+
+    button {
+        padding: 0.75rem;
     }
 }

@@ -5,142 +5,164 @@
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* Body Styling */
 body {
-    background-color: #f7f9fc; /* Softer light background */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Different font */
+    background: linear-gradient(135deg, #e6e9f0, #eef2f3); /* Light gradient background */
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
 }
 
-/* Navigation Styling */
+/* Navigation Bar */
 nav {
-    background-color: white; /* Richer blue */
-    color: #f1f1f1;
-    padding: 20px 35px;
+    background: linear-gradient(135deg, #3a5a8c, #6c8dbd); /* Gradient header */
+    color: #fff;
+    padding: 15px 30px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-left span {
-    font-size: 26px;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .nav-item {
-    background-color: #F04E23; /* Updated red for logout */
+    background: #ff6b6b; /* Vibrant red button */
     color: #fff;
-    padding: 12px 22px;
-    font-size: 15px;
+    padding: 10px 20px;
     border-radius: 30px;
+    font-size: 14px;
     cursor: pointer;
     border: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
 }
 
 .nav-item:hover {
-    background-color: #D83F17; /* Darker red on hover */
+    background: #ff4757;
+    transform: scale(1.1);
 }
 
-/* Container styling */
+/* Main Container */
 .container {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 35px;
-    width: 85%;
-    margin: 50px auto;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+    margin-top: 120px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Folder input and buttons */
+/* Add Folder Section */
 .add-folder {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 
 #folderName {
-    padding: 14px;
-    width: 50%;
+    padding: 15px;
+    width: 60%;
     border-radius: 10px;
-    border: 1px solid #b0bec5;
-    font-size: 17px;
-    transition: border-color 0.3s ease;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #folderName:focus {
-    border-color: #3A5A8C;
+    border-color: #3a5a8c;
+    box-shadow: 0 0 8px rgba(58, 90, 140, 0.2);
 }
 
 .right {
-    background-color: #3A5A8C; /* Main blue for buttons */
+    background: linear-gradient(135deg, #3a5a8c, #2c3d53); /* Gradient button */
     color: white;
-    padding: 12px 20px;
-    border-radius: 10px;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 16px;
     cursor: pointer;
     border: none;
-    font-size: 17px;
-    transition: background-color 0.3s ease;
-    margin-left: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(58, 90, 140, 0.3);
+    margin-left: 10px;
 }
 
 .right:hover {
-    background-color: #2C3D53; /* Darker blue on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(58, 90, 140, 0.5);
 }
 
-/* Folders and files section */
+/* Folders Section */
 .folders-background {
-    background-color: #e8f1fa;
+    background: #f5f7fa;
     padding: 25px;
-    border-radius: 10px;
-    height: 320px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
     overflow-y: auto;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .folder-item {
-    background-color: #fff;
-    padding: 12px;
-    margin: 12px 0;
-    border-radius: 10px;
+    background: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 .folder-item:hover {
-    background-color: #f2f6f8;
+    background: #f9f9f9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .delete-btn {
-    background-color: #F04E23; /* Updated red for delete button */
+    background: linear-gradient(135deg, #ff6b6b, #ff4757); /* Gradient red */
     color: #fff;
     border: none;
-    padding: 6px 12px;
+    padding: 8px 12px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 13px;
-    transition: background-color 0.3s ease;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(255, 107, 107, 0.2);
 }
 
 .delete-btn:hover {
-    background-color: #D83F17;
+    transform: scale(1.2);
+    background: #ff2f2f;
 }
 
-/* Floating Upload Button */
+/* Floating File Upload Button */
 .floating-file-btn {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     z-index: 100;
+    animation: slideUp 0.5s ease-in-out;
 }
 
 .floating-file-btn input[type="file"] {
@@ -148,41 +170,73 @@ nav {
 }
 
 .floating-file-btn label {
-    background-color: #5bc0de; /* Light blue */
+    background: linear-gradient(135deg, #6a89cc, #4a69bd); /* Gradient button */
     color: white;
-    padding: 16px 28px;
+    padding: 20px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
-    box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .floating-file-btn label:hover {
-    background-color: #31b0d5; /* Darker blue on hover */
+    background: #3a5a8c;
+    transform: scale(1.1);
 }
 
-/* Media Queries for Responsiveness */
-@media screen and (max-width: 600px) {
-    .container {
-        width: 90%;
-        padding: 18px;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+
     .add-folder {
         flex-direction: column;
         align-items: stretch;
     }
+
     #folderName {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
+
     .right {
         width: 100%;
         margin-left: 0;
-        text-align: center;
     }
+
     .nav-item {
-        font-size: 13px;
-        padding: 9px 18px;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .floating-file-btn label {
+        font-size: 20px;
+        padding: 15px;
     }
 }
